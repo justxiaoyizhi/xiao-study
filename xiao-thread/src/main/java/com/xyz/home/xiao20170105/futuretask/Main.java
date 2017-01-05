@@ -26,5 +26,6 @@ public class Main {
         System.out.println("执行完了");
         CodeTimer.store("thread", start);
         CodeTimer.printAll();
+        service.shutdown();
     }
 }
