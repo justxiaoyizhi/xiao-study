@@ -1,6 +1,6 @@
 package com.xyz.home.xiao20170105.futuretask;
 
-import com.xyz.company.util.CodeTimer;
+import com.xyz.util.CodeTimer;
 
 import java.util.concurrent.*;
 

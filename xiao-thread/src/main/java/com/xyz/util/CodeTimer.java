@@ -1,4 +1,4 @@
-package com.xyz.company.util;
+package com.xyz.util;
 
 import com.google.common.collect.Maps;
 
