@@ -1,4 +1,4 @@
-package com.xyz.home.xia20170107.threadnosafe;
+package com.xyz.home.xiao20170107.threadnosafe;
 
 /**
  * Created by Xiao on 2017/1/7.
