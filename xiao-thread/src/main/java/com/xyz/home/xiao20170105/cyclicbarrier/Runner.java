@@ -5,6 +5,7 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
+ * 运动员，跑步者
  * Created by Xiao on 2017/1/5.
  */
 public class Runner implements Runnable {

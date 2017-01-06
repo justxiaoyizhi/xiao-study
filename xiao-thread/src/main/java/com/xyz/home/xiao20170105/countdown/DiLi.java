@@ -3,6 +3,7 @@ package com.xyz.home.xiao20170105.countdown;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 地利
  * Created by Xiao on 2017/1/5.
  */
 public class DiLi implements Runnable {

@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ * 运行类
  * Created by Xiao on 2017/1/5.
  */
 public class Main {
