@@ -1,10 +1,9 @@
-package com.xyz.home.xiao20170107.threadnosafe;
+package com.xyz.home.xiao20170107.dirtyread;
 
 /**
- * Created by Xiao on 2017/1/7.
+ * Created by Xiao on 2017/1/8.
  */
 public class ThreadOne implements Runnable {
-
     private Share share;
 
     public ThreadOne(Share share) {
@@ -12,6 +11,6 @@ public class ThreadOne implements Runnable {
     }
 
     public void run() {
-        share.desert();
+        share.setValue("xiao","123456");
     }
 }

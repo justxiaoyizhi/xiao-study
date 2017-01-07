@@ -47,4 +47,12 @@ public class XiaoThread {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 返回线程的名字
+     * @return 线程的名字
+     */
+    public static String getThreadName() {
+        return Thread.currentThread().getName()+"------";
+    }
 }
