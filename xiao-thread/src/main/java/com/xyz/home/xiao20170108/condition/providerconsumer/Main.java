@@ -1,4 +1,4 @@
-package com.xyz.company.fourday.providerconsumer;
+package com.xyz.home.xiao20170108.condition.providerconsumer;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;

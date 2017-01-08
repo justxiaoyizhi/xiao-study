@@ -14,5 +14,6 @@ public class Main {
         new Thread(new ThreadOne(share)).start();
         XiaoThread.sleepSecond(1);
         share.getValue();
+
     }
 }

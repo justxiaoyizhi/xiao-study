@@ -1,4 +1,4 @@
-package com.xyz.company.fourday.providerconsumer;
+package com.xyz.company.xiao20170104.providerconsumer;
 
 /**
  * 生产者

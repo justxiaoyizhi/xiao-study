@@ -1,4 +1,4 @@
-package com.xyz.company.fourday.providerconsumer;
+package com.xyz.company.xiao20170104.providerconsumer;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
@@ -22,7 +22,7 @@ public class Resource {
     public synchronized void provide() {
         try {
             // 已经放满了
-            if(this.isFull()) {
+            while(this.isFull()) {
                 System.out.println("库存满了,不能提供了");
                 this.wait();
             }
@@ -42,7 +42,7 @@ public class Resource {
     public synchronized void take() {
         try {
             // 已经没有数据了
-            if (this.isEmpty()) {
+            while(this.isEmpty()) {
                 System.out.println("库存空了,不能再取了");
                 this.wait();
             }

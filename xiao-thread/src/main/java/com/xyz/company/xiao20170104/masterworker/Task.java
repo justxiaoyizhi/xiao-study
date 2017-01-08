@@ -1,4 +1,4 @@
-package com.xyz.company.fourday.masterworker;
+package com.xyz.company.xiao20170104.masterworker;
 
 import lombok.Getter;
 import lombok.Setter;

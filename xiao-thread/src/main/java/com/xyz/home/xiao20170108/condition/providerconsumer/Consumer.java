@@ -1,4 +1,7 @@
-package com.xyz.company.fourday.providerconsumer;
+package com.xyz.home.xiao20170108.condition.providerconsumer;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 消费者
@@ -9,6 +12,8 @@ package com.xyz.company.fourday.providerconsumer;
 public class Consumer implements Runnable {
     // 缓冲区
     private Resource resource;
+
+    private Lock lock = new ReentrantLock();
 
     public Consumer(Resource resource) {
         this.resource = resource;
