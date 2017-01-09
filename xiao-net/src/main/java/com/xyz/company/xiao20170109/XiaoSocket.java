@@ -3,6 +3,8 @@ package com.xyz.company.xiao20170109;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 
 /**
@@ -13,13 +15,24 @@ import java.net.Socket;
 public class XiaoSocket {
 
     public static void main(String[] args) {
+        Socket socket = null;
+        InputStream inputStream = null;
+        OutputStream outputStream = null;
         try {
-            Socket socket = new Socket("192.168.1.73",9999);
-            IOUtils.write("见到你很高兴",socket.getOutputStream());
-            String response = IOUtils.toString(socket.getInputStream(), "utf-8");
+            socket = new Socket("127.0.0.1",9999);
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+            IOUtils.write("你瞅啥！！！",outputStream,"utf-8");
+            // 必须要有这一句话，不然就永远阻塞，因为服务器会一直等客户端“写完”
+            socket.shutdownOutput();
+            String response = IOUtils.toString(inputStream, "utf-8");
             System.out.println(response);
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(inputStream);
+            IOUtils.closeQuietly(outputStream);
+            IOUtils.closeQuietly(socket);
         }
     }
 }

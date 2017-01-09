@@ -21,14 +21,12 @@ public class SocketHandler implements Runnable {
 
     public void run() {
         try {
-            System.out.println("有人了");
             String str = IOUtils.toString(socket.getInputStream(), "utf-8");
             System.out.println(str);
-            IOUtils.write("见到你很高兴",socket.getOutputStream());
+            IOUtils.write("瞅你咋滴？",socket.getOutputStream());
+            socket.shutdownOutput();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            IOUtils.closeQuietly(socket);
         }
     }
 }

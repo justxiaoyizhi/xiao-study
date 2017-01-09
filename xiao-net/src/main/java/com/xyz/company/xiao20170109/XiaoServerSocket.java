@@ -1,5 +1,7 @@
 package com.xyz.company.xiao20170109;
 
+import org.apache.commons.io.IOUtils;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -12,15 +14,15 @@ import java.net.Socket;
  **/
 public class XiaoServerSocket {
     public static void main(String[] args) {
+        ServerSocket serverSocket = null;
         try {
-            ServerSocket serverSocket = new ServerSocket(9999);
+            serverSocket = new ServerSocket(9999);
             Socket socket = serverSocket.accept();
             new Thread(new SocketHandler(socket)).start();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-
+            IOUtils.closeQuietly(serverSocket);
         }
-
     }
 }
