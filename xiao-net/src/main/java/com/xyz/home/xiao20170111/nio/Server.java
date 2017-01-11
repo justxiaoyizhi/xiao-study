@@ -32,10 +32,10 @@ public class Server implements Runnable {
             this.selector = SelectorProvider.provider().openSelector();
             // 打开服务器管道
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-            // 绑定到端口上
-            serverSocketChannel.socket().bind(new InetSocketAddress(port));
             // 配置为非阻塞
             serverSocketChannel.configureBlocking(false);
+            // 绑定到端口上
+            serverSocketChannel.bind(new InetSocketAddress(port));
             // 将选择器注册到通道上，返回一个选择键
             serverSocketChannel.register(this.selector, SelectionKey.OP_ACCEPT);
         } catch (IOException e) {
@@ -45,23 +45,30 @@ public class Server implements Runnable {
 
     public void run() {
         while (true) {
-            Iterator selectorKeys = this.selector.selectedKeys().iterator();
-            while (selectorKeys.hasNext()) {
-                System.out.println("running2 ... ");
-                //这里找到当前的选择键
-                SelectionKey key = (SelectionKey) selectorKeys.next();
-                //然后将它从返回键队列中删除
-                selectorKeys.remove();
-                if (!key.isValid()) { // 选择键无效
-                    continue;
+            try {
+                System.out.println("running ... ");
+                //多路复用选择器开始监听
+                this.selector.select();
+
+                Iterator selectorKeys = this.selector.selectedKeys().iterator();
+                while (selectorKeys.hasNext()) {
+                    //这里找到当前的选择键
+                    SelectionKey key = (SelectionKey) selectorKeys.next();
+                    //然后将它从返回键队列中删除
+                    selectorKeys.remove();
+                    if (!key.isValid()) { // 选择键无效
+                        continue;
+                    }
+                    if (key.isAcceptable()) {
+                        //如果遇到请求那么就响应
+                        this.accept(key);
+                    } else if (key.isReadable()) {
+                        //读取客户端的数据
+                        this.read(key);
+                    }
                 }
-                if (key.isAcceptable()) {
-                    //如果遇到请求那么就响应
-                    this.accept(key);
-                } else if (key.isReadable()) {
-                    //读取客户端的数据
-                    this.read(key);
-                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -71,7 +78,7 @@ public class Server implements Runnable {
         try {
             SocketChannel client = ssc.accept();
             client.configureBlocking(false);
-            client.register(this.selector,SelectionKey.OP_READ);
+            client.register(this.selector, SelectionKey.OP_READ);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -93,8 +100,8 @@ public class Server implements Runnable {
             byte[] buffer = new byte[this.bb.remaining()];
             // 将buffer的数据读入字节数组中
             this.bb.get(buffer);
-            String s = new String(buffer,"utf-8").trim();
-            System.out.println("Server receive:"+s);
+            String s = new String(buffer, "utf-8").trim();
+            System.out.println("Server receive:" + s);
             this.bb.flip();
         } catch (Exception e) {
             e.printStackTrace();
