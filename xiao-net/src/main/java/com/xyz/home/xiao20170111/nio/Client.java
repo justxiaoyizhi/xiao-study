@@ -38,6 +38,5 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         new Client().query("127.0.0.1", 8099);
-
     }
 }
