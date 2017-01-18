@@ -30,8 +30,9 @@ public class Client {
                         }
                     });
             // Start the client.
-            ChannelFuture f = strap.connect("127.0.0.1", 9876).sync(); // (5)
-            f.channel().writeAndFlush(Unpooled.copiedBuffer("Hello Netty".getBytes("utf-8")));
+            ChannelFuture f = strap.connect("127.0.0.1", 9876).sync();
+            // write the data to Server
+            f.channel().writeAndFlush(Unpooled.copiedBuffer("Hello Server".getBytes("utf-8")));
             // Wait until the connection is closed.
             f.channel().closeFuture().sync();
         } finally {
