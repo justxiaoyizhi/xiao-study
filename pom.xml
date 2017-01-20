@@ -524,6 +524,11 @@
             <version>3.3.6</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling</artifactId>
+            <version>1.4.11.Final</version>
+        </dependency>
     </dependencies>
 
 </project>
