@@ -18,7 +18,10 @@ import org.jboss.marshalling.Marshalling;
 import org.jboss.marshalling.MarshallingConfiguration;
 
 /**
+ *
  * Marshalling工厂
+ * @author xiao
+ * @create 2017-01-18 19:27
  */
 public final class MarshallingCodeCFactory {
 
