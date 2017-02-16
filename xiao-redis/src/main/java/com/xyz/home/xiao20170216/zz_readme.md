@@ -1,0 +1,1 @@
+使用redis来实现select * from user where age = 25或者select * from user where age = 25 and sex = m
