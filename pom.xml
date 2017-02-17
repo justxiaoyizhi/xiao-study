@@ -12,6 +12,7 @@
         <module>xiao-thread</module>
         <module>xiao-net</module>
         <module>xiao-question</module>
+        <module>xiao-redis</module>
     </modules>
 
 
