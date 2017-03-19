@@ -14,6 +14,7 @@
         <module>xiao-question</module>
         <module>xiao-redis</module>
         <module>xiao-activemq</module>
+        <module>xiao-guava</module>
     </modules>
 
 
