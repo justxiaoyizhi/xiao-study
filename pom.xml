@@ -15,6 +15,9 @@
         <module>xiao-redis</module>
         <module>xiao-activemq</module>
         <module>xiao-springboot</module>
+        <module>xiao-rocketmq</module>
+        <module>xiao-common</module>
+        <module>xiao-util</module>
     </modules>
 
 
@@ -496,12 +499,6 @@
             <groupId>com.baidu.disconf</groupId>
             <artifactId>disconf-client</artifactId>
             <version>2.6.31</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha2</version>
         </dependency>
 
         <dependency>
