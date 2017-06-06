@@ -18,6 +18,7 @@
         <module>xiao-rocketmq</module>
         <module>xiao-common</module>
         <module>xiao-util</module>
+        <module>xiao-zookeeper</module>
     </modules>
 
 
