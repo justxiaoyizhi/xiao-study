@@ -19,6 +19,8 @@
         <module>xiao-common</module>
         <module>xiao-util</module>
         <module>xiao-zookeeper</module>
+        <module>xiao-dubbo-server</module>
+        <module>xiao-dubbo-client</module>
     </modules>
 
 
