@@ -18,8 +18,8 @@ public class ZkClientZookeeper {
     private static final String ZK_PATH = "/zkclient";
 
     public static void main(String[] args) {
-        //createNode();
-        getUser();
+        createNode();
+        //getUser();
     }
 
     private static void createNode() {
