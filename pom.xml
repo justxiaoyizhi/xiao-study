@@ -22,6 +22,7 @@
         <module>xiao-dubbo-server</module>
         <module>xiao-dubbo-client</module>
         <module>xiao-design</module>
+        <module>xiao-algorithm</module>
     </modules>
 
 
@@ -371,7 +372,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.6.2</version>
+            <version>2.2.2</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>

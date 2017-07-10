@@ -18,8 +18,12 @@ public class ZkClientZookeeper {
     private static final String ZK_PATH = "/zkclient";
 
     public static void main(String[] args) {
-        createNode();
+        //createNode();
         //getUser();
+        String str = "0";
+        if(str == null || Integer.parseInt(str) == 0) {
+            System.out.println(111);
+        }
     }
 
     private static void createNode() {

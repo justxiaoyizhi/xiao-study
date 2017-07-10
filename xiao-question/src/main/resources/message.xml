@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <!-- listener define -->
+    <bean id="student" class="com.xyz.home.xiao20170622.Student" init-method="init" />
+    <bean id="teacher" class="com.xyz.home.xiao20170622.Teacher" init-method="init" />
+</beans>
