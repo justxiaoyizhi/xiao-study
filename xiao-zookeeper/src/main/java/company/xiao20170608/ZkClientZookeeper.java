@@ -19,7 +19,11 @@ public class ZkClientZookeeper {
 
     public static void main(String[] args) {
         //createNode();
-        getUser();
+        //getUser();
+        String str = "0";
+        if(str == null || Integer.parseInt(str) == 0) {
+            System.out.println(111);
+        }
     }
 
     private static void createNode() {
