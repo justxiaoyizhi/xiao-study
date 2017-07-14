@@ -5,11 +5,21 @@ package home.xiao20170710;
  */
 public class Main {
 
-    public static void main(String[] args){
-        VoteManager voteManager = new VoteManager();
-        for (int i = 0; i < 9; i++) {
-            voteManager.request("xiaobai",VoteItemEnum.VoteItemEnum_A.getItem());
-        }
+    public static void main(String[] args) throws Exception {
+
+        Context context = new Context();
+        context.setCurrentState(RunState.getInstance());
+        context.run();
+        context.close();
+        context.open();
+        context.stop();
+        context.open();
+        context.close();
+        context.run();
+        context.stop();
+        context.close();
+        context.open();
+        context.close();
     }
 
 }
