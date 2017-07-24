@@ -17,8 +17,8 @@ public class RocketMQConsumer {
 
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("quite-start-consumer");
-        consumer.setNamesrvAddr("192.168.0.122:9876;192.168.0.123:9876");
-        consumer.subscribe("topicA", "*");
+        consumer.setNamesrvAddr("10.10.10.20:9876");
+        consumer.subscribe("trade", "*");
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
                 try {
