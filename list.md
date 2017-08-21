@@ -1,3 +1,4 @@
 - xiao-question company xiao20170717 Integer是否可以双等int
 - xiao-thread home xiao20170724 Java并发编程实战的发布与溢出this
 - xiao-thread home xiao20170725 Java并发编程实战的ThreadLocal
+- xiao-question company xiao20170815 线程访问主线程的final变量
