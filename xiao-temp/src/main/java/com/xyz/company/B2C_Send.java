@@ -17,10 +17,10 @@ public class B2C_Send {
     public static void main(String args[]) {
 		/* 可配置的参数 */
         String antiPhishUrl="https://www.baiwandian1.cn/";//防钓鱼地址
-        String pub = "5d6768a74aa9db27b86b8e9b0*****1";// 公钥后30位
-        String merchantID = "10533100**********";// 商户编号
+        String pub = "4233c7b29ac7efa564b760e1020113";// 公钥后30位
+        String merchantID = "105331000001676";// 商户编号
         String orderId = "2015010910921094";// 订单号
-        String postId = "00212*******";// 商户POS号
+        String postId = "002128111";// 商户POS号
         String payment = "0.04";// 金额
         String curCode = "01";// 币种
         String txCode = "520100";// 交易代码
