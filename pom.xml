@@ -23,6 +23,7 @@
         <module>xiao-dubbo-client</module>
         <module>xiao-design</module>
         <module>xiao-temp</module>
+        <module>xiao-review</module>
     </modules>
 
 

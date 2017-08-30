@@ -2,3 +2,5 @@
 - xiao-thread home xiao20170724 Java并发编程实战的发布与溢出this
 - xiao-thread home xiao20170725 Java并发编程实战的ThreadLocal
 - xiao-question company xiao20170815 线程访问主线程的final变量
+- xiao-util company xiao20170828 重试机制(非异步)
+- xiao-review company xiao20170830 重顾Callable的使用
