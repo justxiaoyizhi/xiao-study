@@ -4,3 +4,4 @@
 - xiao-question company xiao20170815 线程访问主线程的final变量
 - xiao-util company xiao20170828 重试机制(非异步)
 - xiao-review company xiao20170830 重顾Callable的使用
+- xiao-question company xiao20170815 多线程访问final变量
