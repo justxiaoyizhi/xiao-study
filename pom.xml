@@ -25,6 +25,7 @@
         <module>xiao-temp</module>
         <module>xiao-review</module>
         <module>xiao-hbase</module>
+        <module>xiao-memcached</module>
     </modules>
 
 
