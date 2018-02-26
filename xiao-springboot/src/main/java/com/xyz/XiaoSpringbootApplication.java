@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootConfiguration
 public class XiaoSpringbootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(XiaoSpringbootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(XiaoSpringbootApplication.class, args);
+    }
 }
