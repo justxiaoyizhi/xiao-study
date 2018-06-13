@@ -25,6 +25,10 @@ public class CodeTimer {
         return System.currentTimeMillis();
     }
 
+    public static void clean() {
+        times.clear();
+    }
+
     public static void printAll() {
         System.out.println("\n-------------------\nxy.utils.CodeTimer\n-------------------");
         for (Map.Entry e : times.entrySet()) {
