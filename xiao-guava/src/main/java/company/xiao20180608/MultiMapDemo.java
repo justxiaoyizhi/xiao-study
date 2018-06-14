@@ -2,6 +2,7 @@ package company.xiao20180608;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Lists;
 import org.apache.commons.collections.MultiMap;
 
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public class MultiMapDemo {
 
     public void demo() {
         Map<Integer, List<Student>> map = new HashMap();
-        if (map.containsKey(1)) {
-            map.put(1, new ArrayList());
+        if (!map.containsKey(1)) {
+            map.put(1, Lists.newArrayList());
         }
         map.get(1).add(new Student(1, 15, "demo"));
 

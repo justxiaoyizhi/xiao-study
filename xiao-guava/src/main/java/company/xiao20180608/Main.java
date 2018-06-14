@@ -1,14 +1,11 @@
 package company.xiao20180608;
 
-import com.google.common.collect.ImmutableMap;
+import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.xyz.util.CodeTimer;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * Description: 演示类
@@ -24,24 +21,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-            // Splitter
-//        List<Integer> collect = Splitter.on(",").omitEmptyStrings().trimResults().trimResults(CharMatcher.is('1')).splitToList(", 1415,16,,17")
-//                .stream().map(Integer::parseInt).collect(Collectors.toList());
+        System.out.println("=============splitter==============");
+        SplitterDemo splitterDemo = new SplitterDemo();
+        splitterDemo.demo();
 
-//        List<String> strings = Splitter.on(",").omitEmptyStrings().trimResults().trimResults(CharMatcher.is('1')).splitToList(", 1415,16,,17");
-//        System.out.println(strings);
+        System.out.println("=============joiner==============");
 
-            // Joiner
-//        Map map = new HashMap();
-//        map.put("id",1);
-//        map.put("age",23);
-//        map.put("name", "xiao");
-//        String join = Joiner.on("&").withKeyValueSeparator("=").join(map);
-//        System.out.println(join);
+        // Joiner
+        Map map = new HashMap();
+        map.put("id",1);
+        map.put("age",23);
+        map.put("name", "xiao");
+        String join = Joiner.on("&").withKeyValueSeparator("=").join(map);
+        System.out.println(join);
+
+        List<String> list = Lists.newArrayList("a", "bc", "dog");
+        String result = Joiner.on(",").join(list);
+        System.out.println(result);
 
 
-        MapsUnindexDemo mapsUnindexDemo = new MapsUnindexDemo();
-        mapsUnindexDemo.demo();
+//        MapsUnindexDemo mapsUnindexDemo = new MapsUnindexDemo();
+//        mapsUnindexDemo.demo();
     }
 
 }

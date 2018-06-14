@@ -1,8 +1,6 @@
 package company.xiao20180608;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 import com.xyz.util.CodeTimer;
 
 import java.util.ArrayList;
@@ -41,9 +39,16 @@ public class MapsUnindexDemo {
 //            Map<Integer, Student> collect = students.stream().collect(Collectors.toMap(Student::getId, Function.identity()));
 //            System.out.println(collect);
 
-//            ImmutableListMultimap<Integer, Student> ageKeyStudents = Multimaps.index(students, Student::getAge);
+            ImmutableListMultimap<Integer, Student> ageKeyStudents = Multimaps.index(students, Student::getAge);
 //            ImmutableCollection<Map.Entry<Integer, Student>> entries = ageKeyStudents.entries();
 //            System.out.println(entries);
+
+
+            Map<Integer, Student> result = Maps.newHashMap();
+            for (Student student : students) {
+                result.put(student.getId(), student);
+            }
+
 
             CodeTimer.store("codeTimeExec" + j, start);
         }
