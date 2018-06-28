@@ -6,3 +6,4 @@
 # xiao-review company xiao20170830 重顾Callable的使用
 # xiao-question company xiao20170815 多线程访问final变量
 # xiao-question company xiao20180125 序列化
+# xiao-util company xiao20180628 自定义注解
