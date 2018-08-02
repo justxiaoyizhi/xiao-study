@@ -26,6 +26,8 @@
         <module>xiao-hbase</module>
         <module>xiao-memcached</module>
         <module>xiao-guava</module>
+        <module>spring-boot-back</module>
+        <module>xiao-springboot-bak</module>
     </modules>
 
 

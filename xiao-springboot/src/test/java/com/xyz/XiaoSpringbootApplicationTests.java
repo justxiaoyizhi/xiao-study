@@ -28,7 +28,7 @@ public class XiaoSpringbootApplicationTests {
     @Test
     public void getRegionByCityCode() {
         Region region = regionUtil.getRegionByCityCode(330100);
-        System.out.println(region);
+         System.out.println(region);
     }
 
 }
