@@ -3,6 +3,8 @@ package com.xyz;
 import com.xyz.xiao20180619.CommandManager;
 import com.xyz.xiao20180629.Region;
 import com.xyz.xiao20180629.RegionUtil;
+import com.xyz.xiao20180802.SessionController;
+import com.xyz.xiao20180831.BizService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,17 @@ public class XiaoSpringbootApplicationTests {
 
     @Autowired
     RegionUtil regionUtil;
+
+    @Autowired
+    SessionController sessionController;
+
+    @Autowired
+    BizService bizService;
+
+    @Test
+    public void testCodeTimer() {
+        bizService.cal();
+    }
 
     @Test
     public void contextLoads() {
