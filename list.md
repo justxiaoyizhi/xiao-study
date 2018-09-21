@@ -14,3 +14,4 @@
 - xiao-util company xiao20180801 计算一个周期时间
 - xiao-util company xiao20180831 代码执行时间切面
 - xiao-springboot company xiao20180831 代码执行时间切面实践
+- xiao-dubbo-client/xiao-dubbo-server dubbo泛化调用异常
