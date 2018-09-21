@@ -10,6 +10,7 @@ import company.xiao20170606.DemoService;
 public class DemoServiceImpl implements DemoService {
 
     public String sayHello(String name) {
-        return "hello " + name + ", i'm dubbo";
+        throw new ClassCastException("not cast");
+//        return "hello " + name + ", i'm dubbo";
     }
 }
