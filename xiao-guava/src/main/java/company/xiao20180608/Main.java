@@ -1,6 +1,8 @@
 package company.xiao20180608;
 
+import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
+import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import java.util.HashMap;
@@ -42,6 +44,9 @@ public class Main {
 
 //        MapsUnindexDemo mapsUnindexDemo = new MapsUnindexDemo();
 //        mapsUnindexDemo.demo();
+
+        List<String> list1 = Splitter.on(CharMatcher.ASCII).omitEmptyStrings().splitToList("我们fasg把 v 下成长");
+        System.out.println(list1);
     }
 
 }
