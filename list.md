@@ -15,3 +15,5 @@
 - xiao-util company xiao20180831 代码执行时间切面
 - xiao-springboot company xiao20180831 代码执行时间切面实践
 - xiao-dubbo-client/xiao-dubbo-server dubbo泛化调用异常
+- xiao-spring  spring源码阅读
+- xiao-question company xiao20181008 父子类的成员变量问题

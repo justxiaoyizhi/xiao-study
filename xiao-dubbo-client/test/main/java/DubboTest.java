@@ -29,8 +29,17 @@ public class DubboTest {
 
         // 用com.alibaba.dubbo.rpc.service.GenericService可以替代所有接口引用
         GenericService genericService = reference.get();
-        Object object = genericService.$invoke("sayHello", new String[]{"java.lang.String"}, new Object[]{"xiao"});
+        Object object = null;
+        object = genericService.$invoke("sayHello", new String[]{"java.lang.String"}, new Object[]{"xiao"});
+
         System.out.println(object);
+    }
+
+    @Test
+    public void testSay1() {
+        String result = demoService.sayHello("xiao");
+
+        System.out.println(result);
     }
 
 }
