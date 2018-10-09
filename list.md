@@ -17,3 +17,4 @@
 - xiao-dubbo-client/xiao-dubbo-server dubbo泛化调用异常
 - xiao-spring  spring源码阅读
 - xiao-question company xiao20181008 父子类的成员变量问题
+- xiao-shell prefix_suffix.sh shell脚本取前缀后缀问题
