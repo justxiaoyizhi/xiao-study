@@ -17,3 +17,5 @@ spring:
            min-idle: 0
     session:
       store-type: none
+
+server.enviroment: test
